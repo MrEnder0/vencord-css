@@ -10,8 +10,7 @@
   width: 47px;
 }
 
-/* Removes the discord logo in the top left of the title-bar
 .wordmarkWindows_a934d8 {
-  display: none;
+  margin-top: 4px;
+  /* display: none; */
 }
-*/
