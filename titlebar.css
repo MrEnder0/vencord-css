@@ -1,4 +1,6 @@
 [class*=typeWindows] {
+  /* Enable the following commented line if you are using amoled theme to fix the 2 tone color issue with title bar */
+  /* background-color: #060607; */
   height: 32px;
   margin-top: 0;
 }
@@ -12,5 +14,6 @@
 
 .wordmarkWindows_a934d8 {
   margin-top: 4px;
+  /* Enable the following commented line to hide the discord logo in the top right of the title bar */
   /* display: none; */
 }
