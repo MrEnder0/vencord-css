@@ -1,8 +1,21 @@
+/* Version 2.1 by Mr.Ender */
+
+:root {
+  /* Settings, to use set to 1 (true) to enable, 0 (false) to disable */
+  --use-amoled-theme: 1; 
+  --hide-discord-logo: 0;
+}
+
 [class*=typeWindows] {
-  /* Enable the following commented line if you are using amoled theme to fix the 2 tone color issue with title bar */
-  /* background-color: #060607; */
   height: 32px;
   margin-top: 0;
+
+  /* Conditionally apply the background color */
+  background-color: rgb(
+    calc(6 * var(--use-amoled-theme)),
+    calc(6 * var(--use-amoled-theme)),
+    calc(7 * var(--use-amoled-theme))
+  );
 }
 
 [class*=winButton] {
@@ -14,6 +27,8 @@
 
 .wordmarkWindows_a934d8 {
   margin-top: 4px;
-  /* Enable the following commented line to hide the discord logo in the top right of the title bar */
-  /* display: none; */
+  /* Conditionally disable the Discord titlebar logo */
+  opacity: calc(1 - var(--hide-discord-logo));
+  pointer-events: calc(var(--hide-discord-logo) * -1 + 1);
+  visibility: calc(var(--hide-discord-logo) * -1 + 1);
 }
